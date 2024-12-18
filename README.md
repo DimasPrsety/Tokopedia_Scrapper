@@ -1,30 +1,22 @@
-# Tokopedia Scraper
+# Pricing Update on Tokopedia
 
-# DISCLAIMER
-**THIS CODE IS FOR EDUCATION PURPOSE ONLY, IF YOU WANT TO SCRAPE AND MAKE VALUE FROM IT, PLEASE RESPECT THEIR TOS AND/OR  `robots.txt`; REMEMBER! DO IT WITH YOUR OWN RISK!**  
-_You may like to reading [this](http://pythonscraping.com/blog/tos-and-robots) also._
+Project memang belum selesai, dalam rencananya akan dibuat scrapping data Tokopedia 
 
----
+### Tujuannya
+•⁠  ⁠Bisa pinpoint harga berapa di setiap kategori udang / ikan yang lagi trend
+•⁠  ⁠⁠Dan apa reviewnya dari setiap produk
 
-## On This Code
-1. Scrape detail products from given product urls
-2. Save it as `csv` file
+### Data
+•⁠  ⁠Scraping produk dari search bar sekitar 22 kateogri produk
 
-## How To Run
+### Data Flow
+- Data Scrapped using selenium dan bs4 (scrapper-extract.py)
+- ETL flow diatur oleh Airflow (scrapper-extract.py)
+- Penghubung menggunakan docker (Dockerfile & docker-compose.yaml)
+- Database akan diarahkan ke SQLlite
+- Lalu dibangun dashboard menggunakan streamlit
 
-Install Dependencies
-```bash
-pipenv install
-```
+Problem saat ini
+- Baru sampai poin 2, dockerfile dan dag airflow masih diotak atik
 
-Run Scraper
-```bash
-pipenv run python app.py
-```
-
-----
-## References
-- [https://github.com/REMitchell/python-scraping](https://github.com/REMitchell/python-scraping)
-- [https://github.com/REMitchell/gbfb](https://github.com/REMitchell/gbfb)
-- [http://pythonscraping.com/blog/tos-and-robots](http://pythonscraping.com/blog/tos-and-robots)
-- [https://www.crummy.com/software/BeautifulSoup/bs4/doc/](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+Cheers

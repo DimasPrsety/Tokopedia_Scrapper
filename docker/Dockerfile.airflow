@@ -24,4 +24,3 @@ RUN pip install \
     great-expectations==0.16.13 \
     sqlalchemy-bigquery==1.6.1
 
-COPY --chown=airflow:root ./dags /opt/airflow/dags
